@@ -1,3 +1,4 @@
+const { ActionRowBuilder , ButtonBuilder  }
 const {prefix} = require ('./config.json');
 client.on('messageCreate', async (message) => {
     if (message.content === `${prefix}embed`) {
@@ -5,7 +6,7 @@ client.on('messageCreate', async (message) => {
         const embed = new EmbedBuilder()
             .setTitle('Wick Studio')
             .setDescription('72.20')
-            .setColor('#00FF00');
+            .setColor('Random');
 
 
         const row = new ActionRowBuilder()
@@ -19,12 +20,12 @@ client.on('messageCreate', async (message) => {
                     .setLabel('community')
                     .setStyle('Success'),
                 new ButtonBuilder()
-                    .setURL('')
-                    .setLabel('')
+                    .setURL('https://discord.gg/KXGnFx4TDK')
+                    .setLabel('Premiuma')
                     .setStyle('Link')
             );
 
-        // إرسال الرسالة مع الإمبد والأزرار
+        
         await message.channel.send({ embeds: [embed], components: [row] });
     }
 });
