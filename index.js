@@ -1,4 +1,4 @@
-const { ActionRowBuilder , ButtonBuilder  }
+const { ActionRowBuilder , ButtonBuilder  } = require ('discord.js');
 const {prefix} = require ('./config.json');
 client.on('messageCreate', async (message) => {
     if (message.content === `${prefix}embed`) {
