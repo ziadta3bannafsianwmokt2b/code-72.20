@@ -5,8 +5,8 @@ client.on('messageCreate', async (message) => {
     if (message.content === `${prefix}embed`) {
 
         const embed = new EmbedBuilder()
-            .setTitle('Wick Studio')
-            .setDescription('72.20')
+            .setTitle('Wick Studio - Devs')
+            .setDescription('made by : 72.20')
             .setColor('Random');
 
 
@@ -14,11 +14,11 @@ client.on('messageCreate', async (message) => {
             .addComponents(
                 new ButtonBuilder()
                     .setCustomId('Wick Studio')
-                    .setLabel('studio')
+                    .setLabel('Wick Studio')
                     .setStyle('Primary'), 
                 new ButtonBuilder()
-                    .setCustomId('Wick Community')
-                    .setLabel('community')
+                    .setCustomId('Wicks Support')
+                    .setLabel('Wicks Support')
                     .setStyle('Success'),
                 new ButtonBuilder()
                     .setURL('https://discord.gg/KXGnFx4TDK')
@@ -37,7 +37,7 @@ client.on('interactionCreate', async (interaction) => {
 
     if (interaction.customId === 'Wick Studio') {
         await interaction.reply({ content: 'discord.gg/witon', ephemeral: true });
-    } else if (interaction.customId === 'Wick Community') {
-        await interaction.reply({ content: 'discord.gg/wick-c', ephemeral: true });
+    } else if (interaction.customId === 'Wicks Support') {
+        await interaction.reply({ content: 'https://discord.gg/kcz9VEBHp5', ephemeral: true });
     }
 });
